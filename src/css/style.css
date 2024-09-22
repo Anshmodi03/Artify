@@ -1,0 +1,522 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffbe82;
+}
+
+/* Header Styles */
+header {
+  position: sticky;
+  background-color: #333;
+  color: #ff0000;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  z-index: 1000;
+}
+
+header.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+  margin-bottom: -10px;
+}
+
+.logo {
+  width: 150px; /* fixed width for logo */
+  margin-right: 20px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-toggle {
+  display: none;
+}
+
+.mobile-menu-items {
+  display: none;
+  flex-direction: column;
+}
+
+.mobile-menu-items.active {
+  display: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+nav li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 30px;
+}
+
+nav a {
+  background-image: linear-gradient(
+    to left top,
+    #0042f9,
+    #862fe6,
+    #b716d0,
+    #d700b9,
+    #ed00a3,
+    #fe0081,
+    #ff245f,
+    #ff4640,
+    #ff7800,
+    #e5aa00,
+    #add700,
+    #00ff0b
+  );
+  background-clip: text;
+  color: transparent;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  border-radius: 20%;
+  font-size: 16px;
+  border: none;
+  transition: all 1s ease-in-out;
+}
+
+nav a:hover {
+  background-image: linear-gradient(
+    to left top,
+    #00ccff,
+    #00ffd5,
+    #c9ed00,
+    #fe0081,
+    #00ff2a,
+    #d9ff00,
+    #add700,
+    #00ff55
+  );
+  background-clip: text;
+  color: transparent;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  border-radius: 20%;
+  font-size: 19px;
+  border: 1px solid transparent;
+  transition: all 1s ease-in-out;
+}
+
+.fav-section,
+.coll-section {
+  min-height: 380px;
+}
+
+.fav-section h2,
+.coll-section h2 {
+  width: 270px;
+}
+
+.fav-section p,
+.coll-section p {
+  color: rgb(110, 101, 101);
+  text-align: center;
+  margin-top: 270px;
+}
+
+.fav-gallery,
+.coll-gallery {
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Main Styles */
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  margin-top: 60px;
+  margin-left: -23px;
+}
+
+main h2 {
+  text-align: center;
+  width: 150px;
+  margin-bottom: 20px;
+  background-color: black;
+}
+
+section {
+  background-image: url(../public/images/colorful-abstract-background-with-pink-blue-geometric-pattern_605423-14005.jpg);
+  background-size: contain;
+}
+
+.gallery-section {
+  background-color: #fff;
+  padding: 2em;
+  margin-bottom: 50px;
+  width: 1330px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-section h2 {
+  text-align: center;
+  margin-left: 540px;
+  font-size: 29px;
+  background-color: rgb(0, 0, 0);
+  padding: 10px 1px;
+  background-image: linear-gradient(
+    to left top,
+    #fe0081,
+    #00ff6a,
+    #40ffef,
+    #2bff00,
+    #00e586,
+    #ff0000,
+    #ffee00
+  );
+  background-clip: text;
+  text-decoration: underline;
+  color: transparent;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  border-radius: 20%;
+  transition: all 1s ease-in-out;
+}
+
+/* Gallery and Image Styles */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align items to the left */
+  gap: 20px; /* Space between images */
+}
+
+.image-container {
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners for images */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+  transition: transform 0.3s ease; /* Animation for hover effect */
+  position: relative; /* To position icons */
+  margin: 0; /* Remove margin-left */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover; /* Ensures image fills the container without distortion */
+}
+
+.gallery img:hover {
+  cursor: pointer;
+  filter: opacity(0.8);
+}
+
+/* Heart Icon Styles for Favorites */
+.fa-heart {
+  position: absolute;
+  top: 10px;
+  left: 10px; /* Position it on the left */
+  color: rgb(234, 0, 255);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.fa-heart.favorite {
+  color: red; /* Color when favorited */
+}
+
+/* Plus Icon Styles */
+.fa-plus {
+  position: absolute;
+  top: 10px;
+  right: 230px; /* Adjusted position for more space */
+  color: rgb(43, 255, 0);
+  font-size: 1.5rem;
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+
+/* Check Icon Styles for Collection */
+.fa-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: rgb(0, 255, 64);
+  font-size: 1.5rem;
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+
+.fa-check.favorite {
+  color: rgb(82, 77, 77); /* Color when added to collection */
+}
+
+/* Hover Effect on Image */
+.image-container:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  clear: both;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Favorite Section Styles */
+.fav-section {
+  min-height: 380px;
+  padding: 20px;
+}
+
+.fav-section h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  margin-left: -20px;
+}
+
+.fav-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Image container styles */
+.img-container {
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.fav-gallery img:hover {
+  cursor: pointer;
+  filter: opacity(0.8);
+}
+
+/* Style for the image details container */
+.fav-gallery.coll-gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -20px;
+}
+
+/* Style for the image */
+.fav-gallery.coll-gallery img {
+  max-width: 700px;
+  max-height: 700px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  justify-content: start;
+  margin-left: -500px;
+  margin-top: -20px;
+}
+
+/* Style for the description paragraph */
+.fav-gallery.coll-gallery p {
+  margin-top: -550px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+/* Style for the download button */
+.download-btn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: -200px;
+  margin-top: -450px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the download button */
+.download-btn:hover {
+  background-color: #0056b3; /* Darker shade */
+}
+
+/* Responsive Images */
+@media (max-width: 480px) {
+  header {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mobile-menu-toggle i {
+    text-align: end;
+    justify-content: end;
+    margin-left: 0px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block; /* Show mobile menu toggle */
+  }
+
+  .mobile-menu-toggle i {
+    justify-content: start;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main {
+    margin-top: 60px;
+    margin-left: 3px;
+  }
+
+  main h2 {
+    margin-top: -20px;
+    text-align: center;
+    margin-left: 90px;
+  }
+
+  .gallery {
+    flex-direction: column; /* Images stack vertically on smaller screens */
+  }
+
+  .gallery img {
+    width: 255px;
+    height: 200%;
+    margin-left: -25px;
+  }
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .logo nav {
+    display: none; /* Hide navigation on smaller screens */
+  }
+
+  .logo {
+    margin-right: 0; /* Remove margin from logo */
+  }
+}
+
+/* Responsive Gallery Section */
+@media (max-width: 768px) {
+  .gallery-section {
+    width: 270px; /* Gallery section takes full width on smaller screens */
+    margin-top: -30px;
+    margin-left: -20px;
+  }
+
+  .gallery-section h2 {
+    margin-left: 0; /* Center the heading */
+    margin-top: -27px;
+    margin-bottom: -10px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .fa-heart {
+    margin-left: -5px;
+  }
+
+  .fa-plus {
+    margin-right: 15px;
+  }
+
+  .fav-section {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fav-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-container {
+    width: 80%; /* Adjust the image container width */
+    margin-bottom: 20px;
+  }
+
+  .fav-section h2 {
+    font-size: 20px; /* Smaller font size on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .fav-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-container {
+    width: 250px; /* Full width images on small screens */
+    margin-bottom: 20px;
+    margin-left: -10px;
+    margin-top: 10px;
+  }
+
+  .fav-section h2 {
+    font-size: 22px;
+  }
+}

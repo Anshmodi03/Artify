@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Favorites - Artify</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <script type="module" src="./js/favorites.js" defer></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    </head>
+    <body>
+        <header>
+      <div class="logo">
+        <h1>Artify</h1>
+      </div>
+      <nav class="main-menu-items navbar">
+        <ul class="main-nav">
+          <li><a href="#nature">Nature</a></li>
+          <li><a href="#wallpapers">Wallpapers</a></li>
+          <li><a href="#animals">Animals</a></li>
+          <li><a href="#spirituality">Spirituality</a></li>
+          <li><a href="#sports">Sports</a></li>
+          <li><a href="./favourite.html">Favorites</a></li>
+          <!-- Favorites in the navbar -->
+          <li><a href="/artify/src/index.html">Back to Gallery</a></li>
+          <!-- Collection in the navbar -->
+        </ul>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu"></div>
+          <!-- Hamburger button -->
+          <div
+            class="mobile-menu-toggle"
+            role="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu-items"
+            aria-label="Open mobile menu"
+            tabindex="0"
+          >
+            <i class="fas fa-bars fa-2x"></i>
+          </div>
+          <!-- Mobile Menu Items -->
+          <div class="mobile-menu-items">
+            <ul class="mobile-menu-list">
+              <li><a href="#nature">Nature</a></li>
+          <li><a href="#wallpapers">Wallpapers</a></li>
+          <li><a href="#animals">Animals</a></li>
+          <li><a href="#spirituality">Spirituality</a></li>
+          <li><a href="#sports">Sports</a></li>
+          <li><a href="./favourite.html">Favorites</a></li>
+          <!-- Favorites in the navbar -->
+           <li><a href="/artify/src/index.html">Back to Gallery</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </nav>
+    </header>
+
+        <main>
+            <section class="gallery-section fav-section">
+                <h2>Your Favorite Images</h2>
+                <div class="fav-gallery" id="favorites-gallery"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Artify - Virtual Art Gallery © 2024</p>
+        </footer>
+    </body>
+</html>
