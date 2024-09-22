@@ -34,7 +34,7 @@
 
 ## Screenshots 📸
 
-![Yummy Action Screenshot] (/src/public/images/Capture.PNG)
+![Yummy Action Screenshot] (src/public/images/Capture.PNG)
 
 ## Getting Started 🚀
 
