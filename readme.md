@@ -32,7 +32,7 @@
 - **Font Awesome**: Icons to enhance UI elements such as the cart, buttons, and more.
 - **Surge**: Static web hosting platform for fast and reliable deployment.
 
-![Yummy Action Screenshot](../src/public/images/Capture.PNG)
+![Yummy Action Screenshot](/src/public/images/Capture.PNG)
 
 
 ## Getting Started 🚀
